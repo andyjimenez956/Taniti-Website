@@ -11,23 +11,81 @@
     <header>
         <div class="title-box">
             <h1 class="site-title">Booking</h1>
-            <img src="assets/logo.jpg" alt="Taniti Logo" class="logo-img">
+            <img src="assets/logo.png" alt="Taniti Logo" class="logo-img">
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="activities.html">Activities</a></li>
-                <li><a href="lodging.html">Lodging</a></li>
-                <li><a href="food.html">Food</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="booking.html">Booking</a></li>    
+                <li><a href="index.html" class="bordered-link">Home</a></li>
+            <li><a href="about.html" class="bordered-link">About</a></li>
+            <li><a href="activities.html" class="bordered-link">Activities</a></li>
+            <li><a href="lodging.html" class="bordered-link">Lodging</a></li>
+            <li><a href="food.html" class="bordered-link">Food</a></li>
+            <li><a href="faq.html" class="bordered-link">FAQ</a></li>
+            <li><a href="booking.html" class="bordered-link">Booking</a></li>        
             </ul>
             
         </nav>
     </header>
     <main>
+        <img src="assets/booking-header.png" alt="Booking Header" class="activity-img">
 
+        <section class="booking-section">
+        <h2>Start Planning Your Trip to Taniti</h2>
+        <p>Fill out the information below, and we’ll help you explore lodging, transportation, and island activities.</p>
+
+        <form class="booking-form">
+
+            <!-- TRAVELER INFO -->
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <!-- TRAVEL DATES -->
+            <div class="form-group">
+                <label for="arrival">Arrival Date</label>
+                <input type="date" id="arrival" name="arrival" required>
+            </div>
+
+            <div class="form-group">
+                <label for="departure">Departure Date</label>
+                <input type="date" id="departure" name="departure" required>
+            </div>
+
+            <!-- ISLAND INTERESTS -->
+            <div class="form-group">
+                <label for="interests">What are you most interested in?</label>
+                <select id="interests" name="interests" required>
+                    <option value="">-- Select an option --</option>
+                    <option value="beaches">Beaches</option>
+                    <option value="volcano">Volcano Tours</option>
+                    <option value="rainforest">Rainforest Hikes</option>
+                    <option value="snorkeling">Snorkeling</option>
+                    <option value="merriton">Merriton Landing (Pubs, Brewery, Gallery)</option>
+                    <option value="family">Family Activities</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="travelers">Number of Travelers</label>
+                <input type="number" id="travelers" name="travelers" min="1" required>
+            </div>
+
+            <!-- ADDITIONAL NOTES -->
+            <div class="form-group">
+                <label for="notes">Additional Details (optional)</label>
+                <textarea id="notes" name="notes" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Booking Request</button>
+
+        </form>
+    </section>
     </main>
 
     <footer>

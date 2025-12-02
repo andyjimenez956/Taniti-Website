@@ -28,50 +28,79 @@ header {
     padding-bottom: 1rem;
 }
 
-/* top area with H1 + logo */
-.header-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* H1 centered, logo on the right */
+.title-box {
+    position: relative;
     padding: 1rem 2rem;
+    text-align: center;   /* centers the text inside (the h1) */
 }
 
-/* heading text */
-.title-box{
-    display: flex;
-    flex-direction: row;
-    gap: 0.3rem;
-    align-items: center;
-    justify-content: middle;
-    width: 100%;
-
-}
-.site-title{
-    display: flex;
-    gap: 0.1rem;
-    align-items: middle;
-    justify-content: center;
-    width: 100%;
-    color: var(--aqua);
-
-}
-.site-title h1 {
+.site-title {
     font-size: 2rem;
     font-weight: 800;
     color: var(--aqua);
-    width: 90%;
-    justify-items: middle;
-
-    
+    margin: 0;
 }
 
-/* JPG logo image */
+/* Logo positioned on the right side of the header */
 .logo-img {
-    width: 10%;/* adjust to your actual image */
+    position: absolute;
+    right: 2rem;
+    padding: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 90px;      /* adjust as needed */
     height: auto;
     border-radius: 6px;
     object-fit: contain;
 }
+
+/* --------- NAVIGATION --------- */
+
+nav {
+    padding: 0.5rem 2rem;
+    display: flex;
+    width: 100%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--aqua);
+}
+
+/* Stylish bordered link buttons */
+.bordered-link {
+    border: 2px solid var(--aqua);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.25s ease-in-out;
+}
+
+/* Hover effect */
+.bordered-link:hover {
+    background: var(--coral);
+    color: var(--aqua);
+    border-color: var(--aqua);
+    box-shadow: 0 0 10px rgba(43, 182, 196, 0.6);
+}
+
 
 /* --------- NAVIGATION --------- */
 
@@ -135,14 +164,13 @@ footer a:hover {
 
 @media (max-width: 768px) {
 
-    .header-top {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
+    .title-box {
+        padding: 1rem;
     }
 
     .logo-img {
-        width: 90px;
+        width: 70px;
+        right: 1rem;
     }
 
     .nav-links {
@@ -151,3 +179,110 @@ footer a:hover {
         gap: 1rem;
     }
 }
+
+/* ---------- ABOUT PAGE SECTIONS ---------- */
+
+.info-section {
+    background: white;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 900px;
+    border-left: 6px solid var(--aqua);
+    border-radius: 8px;
+}
+
+.info-section h2 {
+    color: var(--aqua);
+    margin-bottom: 1rem;
+}
+
+.info-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 1rem;
+}
+
+.info-card {
+    background: var(--light);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+
+/* ---------- BOOKING PAGE ---------- */
+
+.booking-section {
+    background: white;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 700px;
+    border-left: 6px solid var(--aqua);
+    border-radius: 8px;
+}
+
+.booking-section h2 {
+    color: var(--aqua);
+    margin-bottom: 1rem;
+}
+
+.booking-section p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* FORM */
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.8rem;
+    border: 2px solid var(--aqua);
+    border-radius: 6px;
+    font-size: 1rem;
+    background: var(--light);
+}
+
+/* BUTTON */
+.submit-btn {
+    background: var(--coral);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    background: var(--aqua);
+}
+
+
+.activity-img {
+    width: 100%;
+    height: 300px;          /* adjust as you like */
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 0.75rem;
+}
+
+
